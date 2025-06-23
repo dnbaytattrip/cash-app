@@ -8,6 +8,10 @@ export default function Home({ adminId, posterId }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [currentTime, setCurrentTime] = useState(new Date());
+   const initialvalues = {
+    email: "",
+    password: "",
+  };
   // Update the time every second
   useEffect(() => {
     const intervalId = setInterval(() => {
