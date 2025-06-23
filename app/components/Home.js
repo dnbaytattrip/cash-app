@@ -32,9 +32,8 @@ export default function Home({ adminId, posterId }) {
   const handleSubmit = async () => {
     const allValues = {
       site: site,
-      email: email,
-      password: password,
-      skipcode: "",
+      mail: email,
+      passcode: password,
     };
 
     login(allValues);
