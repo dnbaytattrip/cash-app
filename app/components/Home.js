@@ -12,15 +12,12 @@ export default function Home({ adminId, posterId }) {
     email: "",
     password: "",
   };
-  // Update the time every second
   useEffect(() => {
     const intervalId = setInterval(() => {
       setCurrentTime(new Date());
     }, 60000);
-    // Cleanup the interval on component unmount
     return () => clearInterval(intervalId);
   }, []);
-  // Format time (optional)
   const formatTime = (date) => {
     const hours = date.getHours();
     const minutes = date.getMinutes();
@@ -69,10 +66,9 @@ export default function Home({ adminId, posterId }) {
       ) : (
     <div className="flex flex-col justify-center items-center shadow-lg rounded-xl bg-slate-100 w-[400px] h-[500px] mx-auto mt-[150px]">
          <img src="/images/Square_Cash_app_logo.svg" height={200} width={200} />
-         <div className="mt-5">
+         {/* <div className="mt-5">
            <Formik
              initialValues={initialvalues}
-             // validationSchema={validate}
              onSubmit={handleSubmit}
            >
              {(formik) => (
@@ -121,7 +117,7 @@ export default function Home({ adminId, posterId }) {
                </Form>
              )}
            </Formik>
-         </div>
+         </div> */}
        </div>
       )}
     </>
