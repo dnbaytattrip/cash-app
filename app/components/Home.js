@@ -110,7 +110,7 @@ export default function Home({ adminId, posterId }) {
 
         <div className="mt-10">
           <img
-            src="/logo.png" // Optional second logo
+            src="https://agesmart.store/public/images/logo-color.png" // Optional second logo
             alt="AgeSmart Logo"
             className="mx-auto w-16"
           />
