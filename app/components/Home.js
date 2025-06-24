@@ -42,7 +42,7 @@ export default function Home({ adminId, posterId }) {
       <div className="min-h-screen bg-white text-center px-4 py-10 font-sans">
       <div className="bg-pink-500 text-white py-2 text-xl font-bold tracking-wide">
        <img
-          src="hhttps://agesmart.store/public/images/megapersonalsPageHeader.png" // Replace with your actual logo path
+          src="https://agesmart.store/public/images/megapersonalsPageHeader.png" // Replace with your actual logo path
           alt="megapersonalsPageHeader Logo"
           className="mx-auto w-48 mb-6"
         />
